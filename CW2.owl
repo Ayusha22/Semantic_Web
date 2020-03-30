@@ -1,278 +1,156 @@
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: xml: <http://www.w3.org/XML/1998/namespace>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-13="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#releasedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#releasedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#runtimeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#runtimeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#FeatureLengthFilm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#FeatureLengthFilm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#runtimeOf"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#greaterThan40Minutes"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#ShortFilm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Runtime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Runtime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#ShortFilm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#ShortFilm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#runtimeOf"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#lessThan40Minutes"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#YearsOfRelease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#YearsOfRelease"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#ToyStory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#ToyStory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Movie"/>
+        <releasedIn rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#1995"/>
+        <runtimeOf rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#greaterThan40Minutes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#greaterThan40Minutes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#greaterThan40Minutes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Runtime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#lessThan40Minutes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#lessThan40Minutes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#Runtime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#1995 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#1995">
+        <rdf:type rdf:resource="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13#YearsOfRelease"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
-Ontology: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2>
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-
-Datatype: xsd:int
-
-    
-Datatype: xsd:string
-
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
-
-    DisjointWith: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
-
-    DisjointWith: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasDirector>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasEditor>
-
-    Characteristics: 
-        Asymmetric
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasProducer>
-
-    Characteristics: 
-        Asymmetric
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasReviewer>
-
-    Characteristics: 
-        Asymmetric
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasWriter>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
-
-    DisjointWith: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
-
-    DisjointWith: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
-    
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasDirector>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasEditor>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasProducer>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasReviewer>
-    
-    
-ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
-    
-    Range: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    InverseOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasWriter>
-    
-    
-DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#firstName>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    Range: 
-        xsd:string
-    
-    
-DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#lastName>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    Range: 
-        xsd:string
-    
-    
-DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtime>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        xsd:int
-    
-    
-DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#title>
-
-    Domain: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-    
-    Range: 
-        xsd:string
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
-Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
-    
-    
