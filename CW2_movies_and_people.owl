@@ -1,0 +1,373 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2>
+
+
+Datatype: xsd:int
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasDirector>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasEditor>
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasProducer>
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasReviewer>
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasWriter>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>
+    
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasDirector>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasEditor>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasProducer>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasReviewer>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
+    
+    Range: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasWriter>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#releasedIn>
+
+    
+ObjectProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf>
+
+    
+DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#firstName>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#lastName>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtime>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#title>
+
+    Domain: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Range: 
+        xsd:string
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Editor>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#FeatureLengthFilm>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#GreaterThan40Mins>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Producer>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Reviewer>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Runtime>
+
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ShortFilm>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#LessThan40Mins>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#YearsOfRelease>
+
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#1995>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#YearsOfRelease>
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#GreaterThan40Mins>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Runtime>
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#JohnLasseter>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
+    
+    Facts:  
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ToyStory>,
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ToyStory>
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#LessThan40Mins>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Runtime>
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ToyStory>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Facts:  
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#releasedIn>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#1995>,
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#GreaterThan40Mins>
+    
+    
