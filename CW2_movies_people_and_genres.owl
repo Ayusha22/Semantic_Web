@@ -266,6 +266,16 @@ Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
     
     
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+    
+    
 Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Director>
 
     EquivalentTo: 
@@ -290,11 +300,13 @@ Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#FeatureLengthFilm
 
     EquivalentTo: 
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>)
          and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#GreaterThan40Mins>)
     
     SubClassOf: 
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ShortFilm>
     
     
 Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
@@ -302,12 +314,12 @@ Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
     Annotations: 
         rdfs:comment "This Class defines the Genre of a Movie. Some Movies can have more than one Genre and not all Movies have Genres."
     
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
     
 Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
 
-    EquivalentTo: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
-    
     
 Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Person>
 
@@ -339,11 +351,23 @@ Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ShortFilm>
 
     EquivalentTo: 
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
-         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre> some <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>)
          and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#LessThan40Mins>)
     
     SubClassOf: 
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#FeatureLengthFilm>
+    
+    
+Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Western>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+         and (<http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre> value <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Western>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
     
     
 Class: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Writer>
@@ -374,6 +398,7 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Action>
 Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>
 
     Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>,
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
     
     
@@ -399,6 +424,16 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Crime>
 
     Types: 
         <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Desperado>
+
+    Types: 
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Movie>
+    
+    Facts:  
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasGenre>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Western>,
+     <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#runtimeOf>  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#GreaterThan40Mins>
     
     
 Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Documentary>
@@ -513,6 +548,7 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#War>
 Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Western>
 
     Types: 
-        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>,
+        <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Western>
     
     
