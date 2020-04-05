@@ -1,0 +1,602 @@
+Prefix: cw2.1: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#>
+Prefix: cw2: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: mo: <http://www.movieontology.org/2009/11/09/movieontology.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2>
+
+Import: <http://www.movieontology.org/2009/11/09/movieontology.owl>
+
+AnnotationProperty: owl:sameAs
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:int
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: cw2.1:hasActor
+
+    DisjointWith: 
+        cw2.1:hasActress
+    
+    Domain: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:isActorIn
+    
+    
+ObjectProperty: cw2.1:hasActress
+
+    DisjointWith: 
+        cw2.1:hasActor
+    
+    Domain: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:isActressIn
+    
+    
+ObjectProperty: cw2.1:hasDirector
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector>
+    
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        cw2.1:Director
+    
+    InverseOf: 
+        cw2.1:isDirectorOf
+    
+    
+ObjectProperty: cw2.1:hasEditor
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor>
+    
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        cw2.1:Editor
+    
+    InverseOf: 
+        cw2.1:isEditorOf
+    
+    
+ObjectProperty: cw2.1:hasGenre
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: cw2.1:hasProducer
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer>
+    
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        cw2.1:Producer
+    
+    InverseOf: 
+        cw2.1:isProducerOf
+    
+    
+ObjectProperty: cw2.1:hasReviewer
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        cw2.1:Reviewer
+    
+    InverseOf: 
+        cw2.1:isReviewerOf
+    
+    
+ObjectProperty: cw2.1:hasWriter
+
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        cw2.1:Writer
+    
+    InverseOf: 
+        cw2.1:isWriterOf
+    
+    
+ObjectProperty: cw2.1:isActorIn
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn>
+    
+    DisjointWith: 
+        cw2.1:isActressIn
+    
+    Domain: 
+        cw2.1:Actor
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasActor
+    
+    
+ObjectProperty: cw2.1:isActressIn
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn>
+    
+    DisjointWith: 
+        cw2.1:isActorIn
+    
+    Domain: 
+        cw2.1:Actor
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasActress
+    
+    
+ObjectProperty: cw2.1:isDirectorOf
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf>
+    
+    Domain: 
+        cw2.1:Director
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasDirector
+    
+    
+ObjectProperty: cw2.1:isEditorOf
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn>
+    
+    Domain: 
+        cw2.1:Editor
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasEditor
+    
+    
+ObjectProperty: cw2.1:isProducerOf
+
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isProducedBy>
+    
+    Domain: 
+        cw2.1:Producer
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasProducer
+    
+    
+ObjectProperty: cw2.1:isReviewerOf
+
+    Domain: 
+        cw2.1:Reviewer
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasReviewer
+    
+    
+ObjectProperty: cw2.1:isWriterOf
+
+    Domain: 
+        cw2.1:Writer
+    
+    Range: 
+        cw2.1:Movie
+    
+    InverseOf: 
+        cw2.1:hasWriter
+    
+    
+ObjectProperty: cw2.1:releasedIn
+
+    
+ObjectProperty: cw2.1:runtimeOf
+
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: cw2.1:firstName
+
+    Domain: 
+        cw2.1:Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: cw2.1:lastName
+
+    Domain: 
+        cw2.1:Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: cw2.1:runtime
+
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: cw2.1:title
+
+    Domain: 
+        cw2.1:Movie
+    
+    Range: 
+        xsd:string
+    
+    
+Class: cw2.1:ActionMovie
+
+    EquivalentTo: 
+        cw2.1:Movie
+         and (cw2.1:hasGenre value cw2.1:Action)
+    
+    SubClassOf: 
+        cw2.1:Movie
+    
+    
+Class: cw2.1:Actor
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isActorIn some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:Adventure
+
+    EquivalentTo: 
+        cw2.1:Genre
+         and (cw2.1:hasGenre value cw2.1:Adventure)
+    
+    SubClassOf: 
+        cw2.1:Genre
+    
+    
+Class: cw2.1:ComedyMovie
+
+    EquivalentTo: 
+        cw2.1:Movie
+         and (cw2.1:hasGenre value cw2.1:Comedy)
+    
+    SubClassOf: 
+        cw2.1:Movie
+    
+    
+Class: cw2.1:Director
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isDirectorOf some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:Editor
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isEditorOf some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:FeatureLengthFilm
+
+    EquivalentTo: 
+        cw2.1:Movie
+         and (cw2.1:runtimeOf value cw2.1:GreaterThan40Mins)
+    
+    SubClassOf: 
+        cw2.1:Movie
+    
+    DisjointWith: 
+        cw2.1:ShortFilm
+    
+    
+Class: cw2.1:Genre
+
+    Annotations: 
+        rdfs:comment "This Class defines the Genre of a Movie. Some Movies can have more than one Genre and not all Movies have Genres."
+    
+    
+Class: cw2.1:Movie
+
+    
+Class: cw2.1:Person
+
+    
+Class: cw2.1:Producer
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isProducerOf some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:Reviewer
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isReviewerOf some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:Runtime
+
+    
+Class: cw2.1:ShortFilm
+
+    EquivalentTo: 
+        cw2.1:Movie
+         and (cw2.1:runtimeOf value cw2.1:LessThan40Mins)
+    
+    SubClassOf: 
+        cw2.1:Movie
+    
+    DisjointWith: 
+        cw2.1:FeatureLengthFilm
+    
+    
+Class: cw2.1:Western
+
+    EquivalentTo: 
+        cw2.1:Genre
+         and (cw2.1:hasGenre value cw2.1:Western)
+    
+    SubClassOf: 
+        cw2.1:Genre
+    
+    
+Class: cw2.1:Writer
+
+    EquivalentTo: 
+        cw2.1:Person
+         and (cw2.1:isWriterOf some cw2.1:Movie)
+    
+    SubClassOf: 
+        cw2.1:Person
+    
+    
+Class: cw2.1:YearsOfRelease
+
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#1995>
+
+    Types: 
+        cw2.1:YearsOfRelease
+    
+    
+Individual: cw2.1:Action
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Adventure
+
+    Types: 
+        cw2.1:Adventure,
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Animation
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Children
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Comedy
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Crime
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Desperado
+
+    Types: 
+        cw2.1:Movie
+    
+    Facts:  
+     cw2.1:hasGenre  cw2.1:Western,
+     cw2.1:runtimeOf  cw2.1:GreaterThan40Mins
+    
+    
+Individual: cw2.1:Documentary
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Drama
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Fantasy
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Film-Noir
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:GreaterThan40Mins
+
+    Types: 
+        cw2.1:Runtime
+    
+    
+Individual: cw2.1:Horror
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:IMAX
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:JohnLasseter
+
+    Types: 
+        cw2.1:Person
+    
+    Facts:  
+     cw2.1:isDirectorOf  cw2.1:ToyStory,
+     cw2.1:isWriterOf  cw2.1:ToyStory
+    
+    
+Individual: cw2.1:LessThan40Mins
+
+    Types: 
+        cw2.1:Runtime
+    
+    
+Individual: cw2.1:Musical
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Mystery
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Romance
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Sci-Fi
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Thriller
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:ToyStory
+
+    Types: 
+        cw2.1:Movie
+    
+    Facts:  
+     cw2.1:hasGenre  cw2.1:Adventure,
+     cw2.1:hasGenre  cw2.1:Animation,
+     cw2.1:hasGenre  cw2.1:Children,
+     cw2.1:hasGenre  cw2.1:Comedy,
+     cw2.1:hasGenre  cw2.1:Fantasy,
+     cw2.1:releasedIn  <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#1995>,
+     cw2.1:runtimeOf  cw2.1:GreaterThan40Mins
+    
+    
+Individual: cw2.1:War
+
+    Types: 
+        cw2.1:Genre
+    
+    
+Individual: cw2.1:Western
+
+    Types: 
+        cw2.1:Genre,
+        cw2.1:Western
+    
+    
