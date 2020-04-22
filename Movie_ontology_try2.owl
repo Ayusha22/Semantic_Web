@@ -1,0 +1,13 @@
+Prefix: : <http://www.semanticweb.org/singh/ontologies/2020/3/untitled-ontology-45#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/singh/ontologies/2020/3/CW2_2>
+
+Import: <https://web.archive.org/web/20111213110713/http://www.movieontology.org/2010/01/movieontology.owl>
+
