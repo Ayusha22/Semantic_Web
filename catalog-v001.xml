@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.movieontology.org/2009/11/09/movieontology.owl" uri="http://www.movieontology.org/2010/01/movieontology.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1586096902930" name="http://www.semanticweb.org/odm1/ontologies/2020/2/untitled-ontology-13" uri="CW2_movies.owl"/>
+    </group>
+</catalog>
