@@ -468,7 +468,8 @@ Class: Genre
 
     Annotations: 
         rdfs:comment "This class defines the category genres of the movies or films. Not all films have a genre and films can have multiple genres.",
-        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Genre>
     
     
 Class: Movie
