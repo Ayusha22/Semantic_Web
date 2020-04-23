@@ -383,20 +383,6 @@ DataProperty: runtime
         xsd:int
     
     
-Class: ActionFilm
-
-    Annotations: 
-        rdfs:comment "Movie from target ontology is broader than ActionFilm as ActionFilm is a Movie but also has to have genre Action",
-        <http://www.w3.org/2004/02/skos/core#broader> <http://www.movieontology.org/2009/11/09/Movie>
-    
-    EquivalentTo: 
-        Movie
-         and (hasGenre value Action)
-    
-    SubClassOf: 
-        Movie
-    
-    
 Class: Actor
 
     Annotations: 
@@ -411,21 +397,6 @@ Class: Actor
     
     SubClassOf: 
         Person
-    
-    
-Class: ComedyFilm
-
-    Annotations: 
-        rdfs:comment "Movie from target ontology is broader than ComedyFilm as ComedyFilm is a Movie but also has to have genre comedy",
-        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ComedyFilm>,
-        <http://www.w3.org/2004/02/skos/core#broader> <http://www.movieontology.org/2009/11/09/Movie>
-    
-    EquivalentTo: 
-        Movie
-         and (hasGenre value Comedy)
-    
-    SubClassOf: 
-        Movie
     
     
 Class: Director
@@ -608,18 +579,27 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#5.0>
     
 Individual: Action
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Action>
+    
     Types: 
         Genre
     
     
 Individual: Adventure
 
+    Annotations: 
+        owl:sameAs <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>
+    
     Types: 
         Genre
     
     
 Individual: Animation
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Animation>
+    
     Types: 
         Genre
     
@@ -632,12 +612,18 @@ Individual: Children
     
 Individual: Comedy
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Comedy>
+    
     Types: 
         Genre
     
     
 Individual: Crime
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Crime>
+    
     Types: 
         Genre
     
@@ -653,30 +639,45 @@ Individual: Desperado
     
 Individual: Documentary
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary>
+    
     Types: 
         Genre
     
     
 Individual: Drama
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Drama>
+    
     Types: 
         Genre
     
     
 Individual: Fantasy
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Fantasy>
+    
     Types: 
         Genre
     
     
 Individual: Film-Noir
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Film-Noir>
+    
     Types: 
         Genre
     
     
 Individual: Horror
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Horror>
+    
     Types: 
         Genre
     
@@ -699,30 +700,46 @@ Individual: JohnLasseter
     
 Individual: Musical
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Music>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical>
+    
     Types: 
         Genre
     
     
 Individual: Mystery
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery>
+    
     Types: 
         Genre
     
     
 Individual: Romance
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Romance>
+    
     Types: 
         Genre
     
     
 Individual: Sci-Fi
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Sci-Fi>
+    
     Types: 
         Genre
     
     
 Individual: Thriller
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Thriller>
+    
     Types: 
         Genre
     
@@ -744,12 +761,18 @@ Individual: ToyStory
     
 Individual: War
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#War>
+    
     Types: 
         Genre
     
     
 Individual: Western
 
+    Annotations: 
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Western>
+    
     Types: 
         Genre
     
