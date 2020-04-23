@@ -449,7 +449,7 @@ Class: FeatureLengthFilm
 Class: Genre
 
     Annotations: 
-        rdfs:comment "This Class defines the Genre of a Movie. Some Movies can have more than one Genre and not all Movies have Genres.",
+        rdfs:comment "This Class defines the Genres that movies can have.",
         rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
     
     
