@@ -666,7 +666,6 @@ Individual: Documentary
 
     Annotations: 
         rdfs:comment "plot is a non-fictional and intended to document the reality",
-        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Biography>,
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary>
     
     Types: 
@@ -736,7 +735,6 @@ Individual: Musical
 
     Annotations: 
         rdfs:comment "genre in which characters in the movie sing and or dance which interwove into the narrative of the movie.",
-        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Music>,
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical>
     
     Types: 
