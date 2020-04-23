@@ -1,0 +1,721 @@
+Prefix: : <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2>
+
+
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#broader>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#narrower>
+
+    
+AnnotationProperty: owl:sameAs
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:int
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: hasActor
+
+    Annotations: 
+        rdfs:comment "Movie which has a male actor in it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActor>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor>
+    
+    Domain: 
+        Movie
+    
+    InverseOf: 
+        isActorIn
+    
+    
+ObjectProperty: hasActress
+
+    Annotations: 
+        rdfs:comment "Movie has a female actress in it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasActress>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress>
+    
+    Domain: 
+        Movie
+    
+    InverseOf: 
+        isActressIn
+    
+    
+ObjectProperty: hasDirector
+
+    Annotations: 
+        rdfs:comment "Movie has a Director who directs it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasDirector>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector>
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        Director
+    
+    InverseOf: 
+        isDirectorOf
+    
+    
+ObjectProperty: hasEditor
+
+    Annotations: 
+        rdfs:comment "Movie has an Editor that edits it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasEditor>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor>
+    
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        Editor
+    
+    InverseOf: 
+        isEditorOf
+    
+    
+ObjectProperty: hasGenre
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        isGenreOf
+    
+    
+ObjectProperty: hasProducer
+
+    Annotations: 
+        rdfs:comment "Movie has a Producer that produces it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasProducer>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer>
+    
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        Producer
+    
+    InverseOf: 
+        isProducerOf
+    
+    
+ObjectProperty: hasRated
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        User,
+        hasRated some Rating
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        isRatedBy
+    
+    
+ObjectProperty: hasReviewer
+
+    Annotations: 
+        rdfs:comment "Movie has a Reviewer who reviews it",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasReviewer>
+    
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        Reviewer
+    
+    InverseOf: 
+        isReviewerOf
+    
+    
+ObjectProperty: hasWriter
+
+    Annotations: 
+        rdfs:comment "Movie has a writer who writes its script",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#hasWriter>
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        Writer
+    
+    InverseOf: 
+        isWriterOf
+    
+    
+ObjectProperty: isActorIn
+
+    Annotations: 
+        rdfs:comment "A male actor who acts in a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActorIn>,
+        owl:sameAs <http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn>
+    
+    DisjointWith: 
+        isActressIn
+    
+    Domain: 
+        Actor
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasActor
+    
+    
+ObjectProperty: isActressIn
+
+    Annotations: 
+        rdfs:comment "A femal actor who acts in a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isActressIn>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn>
+    
+    DisjointWith: 
+        isActorIn
+    
+    Domain: 
+        Actor
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasActress
+    
+    
+ObjectProperty: isDirectorOf
+
+    Annotations: 
+        rdfs:comment "A Director who directs a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isDirectorOf>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedmaker>
+    
+    Domain: 
+        Director
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasDirector
+    
+    
+ObjectProperty: isEditorOf
+
+    Annotations: 
+        rdfs:comment "An Editor who edits a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isEditorOf>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn>
+    
+    Domain: 
+        Editor
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasEditor
+    
+    
+ObjectProperty: isGenreOf
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        hasGenre
+    
+    
+ObjectProperty: isProducerOf
+
+    Annotations: 
+        rdfs:comment "A Producer who produces a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isProducerOf>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#isProducedBy>,
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#produced>
+    
+    Domain: 
+        Producer
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasProducer
+    
+    
+ObjectProperty: isRatedBy
+
+    Domain: 
+        Movie
+    
+    Range: 
+        User
+    
+    InverseOf: 
+        hasRated
+    
+    
+ObjectProperty: isReviewerOf
+
+    Annotations: 
+        rdfs:comment "A Reviewer who reviews a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isReviewerOf>
+    
+    Domain: 
+        Reviewer
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasReviewer
+    
+    
+ObjectProperty: isWriterOf
+
+    Annotations: 
+        rdfs:comment "A Writer who writes the script of a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#isWriterOf>
+    
+    Domain: 
+        Writer
+    
+    Range: 
+        Movie
+    
+    InverseOf: 
+        hasWriter
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: ID
+
+    Domain: 
+        User
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: firstName
+
+    Domain: 
+        Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: lastName
+
+    Domain: 
+        Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: releaseYear
+
+    Annotations: 
+        rdfs:comment "releaseYear is sameAs releaseDate, conceptually they represent same idea"
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: runtime
+
+    Annotations: 
+        rdfs:comment "runtime is sameAs runtime, conceptually they represent same idea and act on same domain and range"
+    
+    Domain: 
+        Movie
+    
+    Range: 
+        xsd:int
+    
+    
+Class: Actor
+
+    Annotations: 
+        rdfs:comment "A person who acts in a movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Actor>,
+        owl:sameAs <http://dbpedia.org/ontology/Actor>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isActorIn some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Director
+
+    Annotations: 
+        rdfs:comment "A person who directs a movie",
+        rdfs:label "Director",
+        owl:sameAs <http://dbpedia.org/page/Film_Director>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isDirectorOf some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Editor
+
+    Annotations: 
+        rdfs:comment "A person who edits a movie",
+        rdfs:label "Editor",
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Editor>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isEditorOf some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: FeatureLengthFilm
+
+    Annotations: 
+        rdfs:comment "Movie from target ontology is broader than FeatureLengthFilm as FeatureLengthFilm is a Movie but also has a runtime greater than 40 minutes",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#FeatureLengthFilm>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.movieontology.org/2009/11/09/Movie>
+    
+    EquivalentTo: 
+        Movie
+         and (runtime some xsd:int[> "40"^^xsd:int])
+    
+    SubClassOf: 
+        Movie
+    
+    DisjointWith: 
+        ShortFilm
+    
+    
+Class: Genre
+
+    Annotations: 
+        rdfs:comment "This Class defines the Genre of a Movie. Some Movies can have more than one Genre and not all Movies have Genres.",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+    
+    
+Class: Movie
+
+    
+Class: Person
+
+    
+Class: Producer
+
+    Annotations: 
+        rdfs:comment "A person who produces a movie",
+        rdfs:label "Producer",
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Producer>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isProducerOf some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Rating
+
+    Annotations: 
+        rdfs:comment "Is a number value given to a movie based on a personal experience of viewing the movie",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Rating>
+    
+    EquivalentTo: 
+        (hasRated some Movie)
+         and (hasRated max 1 Rating)
+    
+    
+Class: Reviewer
+
+    Annotations: 
+        rdfs:comment "A person who reviews a movie",
+        rdfs:label "Reviewer",
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isReviewerOf some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: ShortFilm
+
+    Annotations: 
+        rdfs:comment "Movie from target ontology is broader than ShortFilm as ShortFilm is a Movie but also has to have a runtime less than 40 minutes",
+        rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#ShortFilm>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.movieontology.org/2009/11/09/Movie>
+    
+    EquivalentTo: 
+        Movie
+         and (runtime some xsd:int[< "40"^^xsd:int])
+    
+    SubClassOf: 
+        Movie
+    
+    DisjointWith: 
+        FeatureLengthFilm
+    
+    
+Class: User
+
+    SubClassOf: 
+        Person
+    
+    
+Class: Writer
+
+    Annotations: 
+        rdfs:comment "A person who writes the screenplay or script of a movie",
+        rdfs:label "Writer",
+        owl:sameAs <http://dbpedia.org/ontology/Writer>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.ime.usp.br/~renata/FOAF-modifiedPerson>
+    
+    EquivalentTo: 
+        Person
+         and (isWriterOf some Movie)
+    
+    SubClassOf: 
+        Person
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#1.0>
+
+    Types: 
+        Rating
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#2.0>
+
+    Types: 
+        Rating
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#3.0>
+
+    Types: 
+        Rating
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#4.0>
+
+    Types: 
+        Rating
+    
+    
+Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#5.0>
+
+    Types: 
+        Rating
+    
+    
+Individual: Action
+
+    Types: 
+        Genre
+    
+    
+Individual: Adventure
+
+    Types: 
+        Genre
+    
+    
+Individual: Animation
+
+    Types: 
+        Genre
+    
+    
+Individual: Children
+
+    Types: 
+        Genre
+    
+    
+Individual: Comedy
+
+    Types: 
+        Genre
+    
+    
+Individual: Crime
+
+    Types: 
+        Genre
+    
+    
+Individual: Desperado
+
+    Types: 
+        Movie
+    
+    Facts:  
+     hasGenre  Western
+    
+    
+Individual: Documentary
+
+    Types: 
+        Genre
+    
+    
+Individual: Drama
+
+    Types: 
+        Genre
+    
+    
+Individual: Fantasy
+
+    Types: 
+        Genre
+    
+    
+Individual: Film-Noir
+
+    Types: 
+        Genre
+    
+    
+Individual: Horror
+
+    Types: 
+        Genre
+    
+    
+Individual: IMAX
+
+    Types: 
+        Genre
+    
+    
+Individual: JohnLasseter
+
+    Types: 
+        Person
+    
+    Facts:  
+     isDirectorOf  ToyStory,
+     isWriterOf  ToyStory
+    
+    
+Individual: Musical
+
+    Types: 
+        Genre
+    
+    
+Individual: Mystery
+
+    Types: 
+        Genre
+    
+    
+Individual: Romance
+
+    Types: 
+        Genre
+    
+    
+Individual: Sci-Fi
+
+    Types: 
+        Genre
+    
+    
+Individual: Thriller
+
+    Types: 
+        Genre
+    
+    
+Individual: ToyStory
+
+    Types: 
+        Movie
+    
+    Facts:  
+     hasGenre  Adventure,
+     hasGenre  Animation,
+     hasGenre  Children,
+     hasGenre  Comedy,
+     hasGenre  Fantasy,
+     releaseYear  "1995"^^xsd:int,
+     runtime  "127"^^xsd:int
+    
+    
+Individual: War
+
+    Types: 
+        Genre
+    
+    
+Individual: Western
+
+    Types: 
+        Genre
+    
+    
