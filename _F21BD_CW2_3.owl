@@ -106,6 +106,12 @@ ObjectProperty: hasGenre
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Domain: 
+        <http://www.movieontology.org/2009/11/09/Movie>
+    
+    Range: 
+        Genre
+    
     InverseOf: 
         isGenreOf
     
@@ -261,6 +267,12 @@ ObjectProperty: isGenreOf
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Domain: 
+        Genre
+    
+    Range: 
+        <http://www.movieontology.org/2009/11/09/Movie>
+    
     InverseOf: 
         hasGenre
     
@@ -383,6 +395,9 @@ DataProperty: runtime
         xsd:int
     
     
+Class: <http://www.movieontology.org/2009/11/09/Movie>
+
+    
 Class: Actor
 
     Annotations: 
@@ -452,7 +467,7 @@ Class: FeatureLengthFilm
 Class: Genre
 
     Annotations: 
-        rdfs:comment "This Class defines the Genre of a Movie. Some Movies can have more than one Genre and not all Movies have Genres.",
+        rdfs:comment "This class defines the category genres of the movies or films. Not all films have a genre and films can have multiple genres.",
         rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
     
     
@@ -580,6 +595,7 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#5.0>
 Individual: Action
 
     Annotations: 
+        rdfs:comment "Genre where the protagonnist protagonists are thrust into a series of events that typically include violence, fighting, frantic chasing.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Action>
     
     Types: 
@@ -589,6 +605,7 @@ Individual: Action
 Individual: Adventure
 
     Annotations: 
+        rdfs:comment "uses action scenes to display and explore exotic locations in an energetic way",
         owl:sameAs <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Adventure>
     
     Types: 
@@ -598,6 +615,7 @@ Individual: Adventure
 Individual: Animation
 
     Annotations: 
+        rdfs:comment "uses computer-created images with motion for the visualization.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Animation>
     
     Types: 
@@ -606,6 +624,9 @@ Individual: Animation
     
 Individual: Children
 
+    Annotations: 
+        rdfs:comment "movies specifically created for kids and children"
+    
     Types: 
         Genre
     
@@ -613,6 +634,7 @@ Individual: Children
 Individual: Comedy
 
     Annotations: 
+        rdfs:comment "main emphasis is on humor",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Comedy>
     
     Types: 
@@ -622,6 +644,7 @@ Individual: Comedy
 Individual: Crime
 
     Annotations: 
+        rdfs:comment "plot concernes about aspects of the crime and its detection",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Crime>
     
     Types: 
@@ -640,6 +663,7 @@ Individual: Desperado
 Individual: Documentary
 
     Annotations: 
+        rdfs:comment "plot is a non-fictional and intended to document the reality",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary>
     
     Types: 
@@ -649,6 +673,7 @@ Individual: Documentary
 Individual: Drama
 
     Annotations: 
+        rdfs:comment "plot intended to be more serious than humorous in tone.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Drama>
     
     Types: 
@@ -658,6 +683,7 @@ Individual: Drama
 Individual: Fantasy
 
     Annotations: 
+        rdfs:comment "plot uses fantastic themes asmagic, mythologyor exotic fantasy worlds",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Fantasy>
     
     Types: 
@@ -667,6 +693,7 @@ Individual: Fantasy
 Individual: Film-Noir
 
     Annotations: 
+        rdfs:comment "stylish Hollywood crime dramas, particularly those that emphasize cynical attitudes and sexual motivations",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Film-Noir>
     
     Types: 
@@ -676,6 +703,7 @@ Individual: Film-Noir
 Individual: Horror
 
     Annotations: 
+        rdfs:comment "seeks to elicit fear for entertainment purposes.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Horror>
     
     Types: 
@@ -684,6 +712,9 @@ Individual: Horror
     
 Individual: IMAX
 
+    Annotations: 
+        rdfs:comment "genre that specifies the movies used high-resolution cameras, film formats, film projectors an are screened in theaters known for having very large screens"
+    
     Types: 
         Genre
     
@@ -701,6 +732,7 @@ Individual: JohnLasseter
 Individual: Musical
 
     Annotations: 
+        rdfs:comment "genre in which characters in the movie sing and or dance which interwove into the narrative of the movie.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Music>,
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Musical>
     
@@ -711,6 +743,7 @@ Individual: Musical
 Individual: Mystery
 
     Annotations: 
+        rdfs:comment "movie genre that revolves around the solution of a problem or a crime. Generally a private investigator, amateur sleuth tries to solve th case by looking for clues, make dedcutions and investigation.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Mystery>
     
     Types: 
@@ -720,6 +753,7 @@ Individual: Mystery
 Individual: Romance
 
     Annotations: 
+        rdfs:comment "film genre in which the plo often focus on a romantic love storie between the main characters.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Romance>
     
     Types: 
@@ -729,6 +763,7 @@ Individual: Romance
 Individual: Sci-Fi
 
     Annotations: 
+        rdfs:comment "genre of speculative fiction that often the plot concernes about futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes and extraterrestrial life.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Sci-Fi>
     
     Types: 
@@ -738,6 +773,7 @@ Individual: Sci-Fi
 Individual: Thriller
 
     Annotations: 
+        rdfs:comment "also known as suspense film or suspense thriller, is a broad film genre that evokes excitement and suspense in the audience",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Thriller>
     
     Types: 
@@ -762,6 +798,7 @@ Individual: ToyStory
 Individual: War
 
     Annotations: 
+        rdfs:comment "film genre about warfare, tgenerally concerned about naval, air or land battels with combat scenes central to the drama.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#War>
     
     Types: 
@@ -771,6 +808,7 @@ Individual: War
 Individual: Western
 
     Annotations: 
+        rdfs:comment "film genre where stories set in the atter half of the 19th century in the American Old West, generally centering the plot on the life of a cowboy or gunfighter armed with a revolver and a rifle who rides a horse.",
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Western>
     
     Types: 

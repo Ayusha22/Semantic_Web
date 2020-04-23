@@ -105,6 +105,12 @@ ObjectProperty: hasGenre
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Domain: 
+        Movie
+    
+    Range: 
+        Genre
+    
     InverseOf: 
         isGenreOf
     
@@ -259,6 +265,12 @@ ObjectProperty: isGenreOf
 
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Domain: 
+        Genre
+    
+    Range: 
+        Movie
     
     InverseOf: 
         hasGenre
@@ -449,8 +461,11 @@ Class: FeatureLengthFilm
 Class: Genre
 
     Annotations: 
-        rdfs:comment "This Class defines the Genres that movies can have.",
+        rdfs:comment "This class defines the type of Genres. Not all films have a genre and films can have multiple genres",
         rdfs:label <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#Genre>
+    
+    EquivalentTo: 
+        isGenreOf some Movie
     
     
 Class: Movie
@@ -573,36 +588,54 @@ Individual: <http://www.semanticweb.org/singh/ontologies/2020/2/CW2#5.0>
     
 Individual: Action
 
+    Annotations: 
+        rdfs:comment "Genre where the protagonnist protagonists are thrust into a series of events that typically include violence, fighting, frantic chasing."
+    
     Types: 
         Genre
     
     
 Individual: Adventure
 
+    Annotations: 
+        rdfs:comment "uses action scenes to display and explore exotic locations in an energetic way"
+    
     Types: 
         Genre
     
     
 Individual: Animation
 
+    Annotations: 
+        rdfs:comment "uses computer-created images with motion for the visualization."
+    
     Types: 
         Genre
     
     
 Individual: Children
 
+    Annotations: 
+        rdfs:comment "movies specifically created for kids and children"
+    
     Types: 
         Genre
     
     
 Individual: Comedy
 
+    Annotations: 
+        rdfs:comment "main enpahsis is on humor"
+    
     Types: 
         Genre
     
     
 Individual: Crime
 
+    Annotations: 
+        rdfs:comment "plot concernes about aspects of the crime and its detection"
+    
     Types: 
         Genre
     
@@ -618,36 +651,54 @@ Individual: Desperado
     
 Individual: Documentary
 
+    Annotations: 
+        rdfs:comment "plot is a non-fictional and intended to document the reality"
+    
     Types: 
         Genre
     
     
 Individual: Drama
 
+    Annotations: 
+        rdfs:comment "plot intended to be more serious than humorous in tone."
+    
     Types: 
         Genre
     
     
 Individual: Fantasy
 
+    Annotations: 
+        rdfs:comment "plot uses fantastic themes asmagic, mythologyor exotic fantasy worlds"
+    
     Types: 
         Genre
     
     
 Individual: Film-Noir
 
+    Annotations: 
+        rdfs:comment "stylish Hollywood crime dramas, particularly those that emphasize cynical attitudes and sexual motivations"
+    
     Types: 
         Genre
     
     
 Individual: Horror
 
+    Annotations: 
+        rdfs:comment "seeks to elicit fear for entertainment purposes."
+    
     Types: 
         Genre
     
     
 Individual: IMAX
 
+    Annotations: 
+        rdfs:comment "genre that specifies the movies used high-resolution cameras, film formats, film projectors an are screened in theaters known for having very large screens"
+    
     Types: 
         Genre
     
@@ -664,30 +715,45 @@ Individual: JohnLasseter
     
 Individual: Musical
 
+    Annotations: 
+        rdfs:comment "genre in which characters in the movie sing and or dance which interwove into the narrative of the movie."
+    
     Types: 
         Genre
     
     
 Individual: Mystery
 
+    Annotations: 
+        rdfs:comment "movie genre that revolves around the solution of a problem or a crime. Generally a private investigator, amateur sleuth tries to solve th case by looking for clues, make dedcutions and investigation."
+    
     Types: 
         Genre
     
     
 Individual: Romance
 
+    Annotations: 
+        rdfs:comment "film genre in which the plo often focus on a romantic love storie between the main characters."
+    
     Types: 
         Genre
     
     
 Individual: Sci-Fi
 
+    Annotations: 
+        rdfs:comment "genre of speculative fiction that often the plot concernes about futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes and extraterrestrial life."
+    
     Types: 
         Genre
     
     
 Individual: Thriller
 
+    Annotations: 
+        rdfs:comment "also known as suspense film or suspense thriller, is a broad film genre that evokes excitement and suspense in the audience"
+    
     Types: 
         Genre
     
@@ -709,12 +775,18 @@ Individual: ToyStory
     
 Individual: War
 
+    Annotations: 
+        rdfs:comment "film genre about warfare, tgenerally concerned about naval, air or land battels with combat scenes central to the drama."
+    
     Types: 
         Genre
     
     
 Individual: Western
 
+    Annotations: 
+        rdfs:comment "film genre where stories set in the atter half of the 19th century in the American Old West, generally centering the plot on the life of a cowboy or gunfighter armed with a revolver and a rifle who rides a horse."
+    
     Types: 
         Genre
     
