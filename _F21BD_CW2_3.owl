@@ -626,7 +626,8 @@ Individual: Animation
 Individual: Children
 
     Annotations: 
-        rdfs:comment "movies specifically created for kids and children"
+        rdfs:comment "movies specifically created for kids and children",
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Family>
     
     Types: 
         Genre
@@ -665,6 +666,7 @@ Individual: Documentary
 
     Annotations: 
         rdfs:comment "plot is a non-fictional and intended to document the reality",
+        owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Biography>,
         owl:sameAs <http://www.movieontology.org/2009/10/01/movieontology.owl#Documentary>
     
     Types: 
